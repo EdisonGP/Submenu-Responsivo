@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/81d408a6bf.js" crossorigin="anonymous"></script>
+    <title>Menu Responsivo</title>
+</head>
+
+<body>
+    <header class="header">
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <img class="logo" src="logo.png" alt="logo" />
+        <nav class="menu">
+            <ul>
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Responsive 1</a></li>
+                            <li><a href="#">Responsive 2</a></li>
+                            <li><a href="#">Otros</a><i class="fas fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="Pages/responsivePrime.html">Flex Box sin Media</a></li>
+                                        <li><a href="Pages/responsiveMedia.html">Fex Box Media</a></li>
+                                        <li><a href="#">Item 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="hero-image">
+            <div>
+                <h1>Flexbox is fuckin' COOL!!!</h1>
+            </div>
+        </article>
+
+        <section class="flex-container">
+            <article class="flex-item">
+                <h2>Título</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius facilis ut aperiam minus ab
+                    sunt sed
+                    rerum, commodi deleniti repellat impedit modi excepturi. Quia numquam ex provident quo vero?
+                </p>
+            </article>
+            <article class="flex-item">
+                <img src="https://placeimg.com/400/400/people">
+            </article>
+        </section>
+
+        <section class="flex-container flex-row-reverse">
+            <article class="flex-item">
+                <h2>Título</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius facilis ut aperiam minus ab
+                    sunt sed
+                    rerum,
+                    commodi deleniti repellat impedit modi excepturi. Quia numquam ex provident quo vero?
+                </p>
+            </article>
+            <article class="flex-item">
+                <img src="https://placeimg.com/400/400/arch">
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <h2>Sticky Footer</h2>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

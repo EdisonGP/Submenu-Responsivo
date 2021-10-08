@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*===============================Tamanio Dispositivo=======================================*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #2f797c;
+    color: #EEE;
+}
+.footer {
+  padding: 1rem;
+  background-color: #000;
+  color: #EEE;
+}
+.logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    transition:0.5s;
+    display: none; /*oculta el submenu*/
+    width:1000px;
+}
+.menu ul li {
+    display:flex;
+    flex-direction: column;
+    justify-content: center; /*centrar verticalmente los enlaces*/
+    margin-top: 40px;
+    height: 50px;
+    transition: 0.5s;
+}
+.menu ul li:hover {
+    border-bottom: medium solid #5ec8cd;
+}
+.active, menu ul li:hover {
+    border-bottom: medium solid #5ec8cd;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.nav-toggle {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  margin-left: 80%;
+  cursor: pointer;
+}
+
+/*main*/
+main {
+  flex-grow: 1;
+}
+.hero-image {
+    min-height: 100vh;
+    background-image: url("https://placeimg.com/1280/720/animals");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-image div {
+    min-height: inherit;/*hereda la altura minima del contenedor*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .75);
+    text-align: center;
+}
+.hero-image h1 {
+    font-size: 5vw;
+    color: #FFF;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.flex-container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin:10px 10px 30px 10px;
+}
+.flex-item {
+    flex: 0 0 50%;
+}
+.flex-item h2{
+    text-align: center;
+}
+.flex-item img{
+    border-radius: 5px;
+    box-shadow:0 0 5px #000;
+    margin: 10px 0 0 0;
+}
+
+/*===========================Tamanio Computador==============================================*/
+
+@media screen and (min-width: 1024px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 600px;
+        justify-content:space-around;
+    }
+    .menu ul li {
+        width: 120px;
+        height: 40px;
+        transition: 0.1s;
+        margin-top: -5px;
+    }
+
+    /*submenu*/
+    .sub-menu-1{
+        display:none;
+    }
+    .menu ul li:hover .sub-menu-1{
+        display:block;
+        width:190px;
+        position: absolute;
+        background-color: #2f797c;
+        margin-top:230px;
+        margin-left: -15px;
+    }
+    .menu ul li:hover .sub-menu-1 ul{
+        display:block;
+        margin: 10px;
+    }
+    .menu ul li:hover .sub-menu-1 ul li{
+        width:160px;
+        padding:10px;
+        border-bottom: 1px solid #fff;
+        background:transparent;
+        border-radius:0;
+        text-align:left;
+        margin:15px;
+    }
+    .menu ul li:hover .sub-menu-1 ul li:last-child{
+        border-bottom: none;
+    }
+    .menu ul li:hover .sub-menu-1 ul li a:hover{
+      color: #5ec8cd;
+    }
+    .menu ul ul li:nth-child(3){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    /*submenu 2*/
+    .sub-menu-2{
+        display: none;
+    }
+    .menu ul ul li:nth-child(3):hover .sub-menu-2{
+        position: absolute;
+        display: block;
+        width:190px;
+        margin-top: -10px;
+        margin-left: -225px;
+        background-color: #2f797c;
+    }
+   
+    /*Main*/
+    .flex-container {
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        margin:10px 20px 10px 20px;
+    }
+    .flex-item {
+        flex: 0 0 50%;
+    }
+
+    .flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .nav-toggle {
+        display: none;
+    }
+}
